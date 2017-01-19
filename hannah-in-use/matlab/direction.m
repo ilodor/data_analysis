@@ -3,23 +3,16 @@ function v = direction(event, posfile)
 % inputs
 % posfile (# points, 3)
 % even time file (1, times)
-%
-% ex: direction(ripple, pos)
-%
 % outputs
 % vector = [timevector xposvector yposvector fxvector fyvector];
-
-if size(posfile,1) < size(posfile,2)
-	posfile = posfile';
-end
 
 
 t = posfile(:,1);
 x = posfile(:,2);
 y = posfile(:,3);
 
-fx = gradient(x, 1000);
-fy = gradient(y, 1000);
+fx = gradient(x);
+fy = gradient(y);
 
 % make a matrix of time, x, y, fx, fy
 tfxfy = [t x y fx fy];
@@ -79,7 +72,7 @@ i=i+1;
 
 end
 
-figure
+
 quiver(xposvector, yposvector, fxvector, fyvector)
 v = [timevector; xposvector; yposvector; fxvector; fyvector];
 

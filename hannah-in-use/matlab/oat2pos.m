@@ -1,5 +1,4 @@
 function npts = oat2pos(inputfile,outputfile)
-% converts OAT file to binary
 
 formatspec = '%f %f %f %f %f';
 sizespec = [3, Inf];
