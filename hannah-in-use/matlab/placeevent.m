@@ -8,7 +8,7 @@ function vectortxy = placeevent(event, pos)
 % outputs a matrix with time, xpos, ypos
 %
 % ex: 
-% txy = placeevent(rippletimes, position);
+% txy = placeevent(ripples, position);
 
 
 eventsize = size(event,2);

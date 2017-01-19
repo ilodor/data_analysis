@@ -11,7 +11,7 @@ d = timestamp;
 a = other_LFP_data;
 
 
-filtdata = lowpass300(c);
+filtdata = thetafilt(c);
 % filters data with bandpass filter between 100-300hz
 % might want to change this to a low pass filter
 
